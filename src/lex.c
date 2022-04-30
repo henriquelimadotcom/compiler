@@ -26,6 +26,18 @@ void proximo_token()
 
         if (c == EOF)
             break;
+
+        else if (c == '+')
+            makeToken("+", 0);
+
+        else if (c == '-')
+            makeToken("-", 0);
+
+        else if (c == '*')
+            makeToken("*", 0);
+
+        else if (c == '/')
+            makeToken("/", 0);
         
         else if (c == ' ' || c == '\t')
             continue;
