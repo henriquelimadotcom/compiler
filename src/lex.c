@@ -12,18 +12,6 @@ void makeToken(char *nome, int val) //mostrar o token
     printf("<%s, %d>", nome, val);
 }
 
-void palavra()
-{
-    char palavra[100] = "";
-    int pos = 0;
-
-    while (isalnum(c))
-    {
-        palavra[pos++] = c;
-        c = fgetc(file);
-    }
-}
-
 void voltaPonteiro() // volta um caracter se necessário
 {
     if(c != EOF)
@@ -122,4 +110,42 @@ void proximo_token()
             exit(EXIT_FAILURE);
         }
     }
+}
+
+void palavra()
+{
+    char palavra[100] = "";
+    int pos = 0;
+
+    while (isalnum(c))
+    {
+        palavra[pos++] = c;
+        c = fgetc(file);
+    }
+
+voltaPonteiro();
+
+if(strcmp(palavra, "INIT") == 0)
+    makeToken("INIT", 0);
+
+else if(strcmp(palavra, "PRINT") == 0)
+    makeToken("PRINT", 0);
+
+else if(strcmp(palavra, "INPUT") == 0)
+    makeToken("INPUT", 0);
+
+else if(strcmp(palavra, "VAR") == 0)
+    makeToken("VAR", 0);
+
+else if(strcmp(palavra, "IF") == 0)
+    makeToken("IF", 0);
+
+else if(strcmp(palavra, "ELSE") == 0)
+    makeToken("ELSE", 0);
+
+else if(strcmp(palavra, "END") == 0)
+    makeToken("END", 0);
+
+else
+    makeToken("ID", 0);
 }
