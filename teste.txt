@@ -1,3 +1,5 @@
-var troll
+var teste1
 
-troll = 2+2
+1+1
+2+2
+teste1+teste1
