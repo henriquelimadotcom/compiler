@@ -1,5 +1,3 @@
-var teste1
-
-1+1
-2+2
-teste1+teste1
+INIT
+PRINT 1 + 2 * 3
+END
