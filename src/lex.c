@@ -149,3 +149,17 @@ else if(strcmp(palavra, "END") == 0)
 else
     makeToken("ID", 0);
 }
+
+void numero()
+{
+    int k = 0;
+    while(isdigit(c))
+    {
+        k = k * 10 + c - '0';
+        c = fgetc(file);
+    }
+
+voltaPonteiro();
+
+makeToken("T_INIT", k);
+}
