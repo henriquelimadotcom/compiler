@@ -12,6 +12,18 @@ void makeToken(char *nome, int val) //mostrar o token
     printf("<%s, %d>", nome, val);
 }
 
+void palavra()
+{
+    char palavra[100] = "";
+    int pos = 0;
+
+    while (isalnum(c))
+    {
+        palavra[pos++] = c;
+        c = fgetc(file);
+    }
+}
+
 void voltaPonteiro() // volta um caracter se necessário
 {
     if(c != EOF)
