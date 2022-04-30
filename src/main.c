@@ -10,7 +10,7 @@ int main (int arc, char *argv[])
 
     if (file == NULL)
     {
-        printf("Erro ao abrir o arquivo");
+        printf("Erro ao abrir o arquivo\n");
         exit(EXIT_FAILURE);
     }
 
