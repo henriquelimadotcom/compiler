@@ -1,3 +1,18 @@
 INIT
-PRINT 1 + 2 * 3
+ 
+VAR max := 10
+VAR num
+ 
+INPUT num
+ 
+IF (num < max)
+    INIT
+        PRINT 0
+    END
+ 
+ELSE
+    INIT
+        PRINT 1
+    END
+ 
 END
